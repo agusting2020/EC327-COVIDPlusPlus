@@ -3,34 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/myHome">
 
-    <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.mycovidfinanceapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.mycovidfinanceapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_SecondFragment_to_myHome"
-            app:destination="@id/myHome" />
-    </fragment>
     <fragment
         android:id="@+id/myHome"
         android:name="com.example.mycovidfinanceapp.MyHome"
         android:label="fragment_my_home"
         tools:layout="@layout/fragment_my_home" >
-        <action
-            android:id="@+id/action_myHome_to_myAccount"
-            app:destination="@id/myAccount" />
         <action
             android:id="@+id/action_myHome_to_myBudget"
             app:destination="@id/myBudget" />
@@ -40,21 +19,9 @@
         <action
             android:id="@+id/action_myHome_to_mySettings"
             app:destination="@id/mySettings" />
-    </fragment>
-    <fragment
-        android:id="@+id/myAccount"
-        android:name="com.example.mycovidfinanceapp.MyAccount"
-        android:label="fragment_my_account"
-        tools:layout="@layout/fragment_my_account" >
         <action
-            android:id="@+id/action_myAccount_to_myLoans"
-            app:destination="@id/myLoans" />
-        <action
-            android:id="@+id/action_myAccount_to_myCards"
-            app:destination="@id/myCards" />
-        <action
-            android:id="@+id/action_myAccount_to_myBanking"
-            app:destination="@id/myBanking" />
+            android:id="@+id/action_myHome_to_myAccount"
+            app:destination="@id/myAccount" />
     </fragment>
     <fragment
         android:id="@+id/myBudget"
@@ -119,4 +86,37 @@
         android:name="com.example.mycovidfinanceapp.profilesettings"
         android:label="fragment_profilesettings"
         tools:layout="@layout/fragment_profilesettings" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.mycovidfinanceapp.ui.login.LoginActivity"
+        android:label="activity_login"
+        app:action="@string/action_sign_in_short"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.mycovidfinanceapp.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_myHome"
+            app:destination="@id/myHome" />
+        <action
+            android:id="@+id/action_secondFragment_to_myAccount"
+            app:destination="@id/myAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAccount"
+        android:name="com.example.mycovidfinanceapp.MyAccount"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account" >
+        <action
+            android:id="@+id/action_myAccount_to_myBanking"
+            app:destination="@id/myBanking" />
+        <action
+            android:id="@+id/action_myAccount_to_myLoans"
+            app:destination="@id/myLoans" />
+        <action
+            android:id="@+id/action_myAccount_to_myCards"
+            app:destination="@id/myCards" />
+    </fragment>
 </navigation>

@@ -31,4 +31,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="myhome">MyHome</string>
     <string name="your_next_available_paycheck_is_on">Your next available paycheck is on</string>
+    <string name="mybanking">MyBanking</string>
+    <string name="mycards">MyCards</string>
+    <string name="myloans">MyLoans</string>
 </resources>
