@@ -7,6 +7,12 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <!--
+        Strings used in Bottom Navigation Bar
+    -->
+    <string name="nav1">Home</string>
+    <string name="nav2">All Accounts</string>
+
     <string name="hello_first_fragment">Welcome!</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
