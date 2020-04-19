@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorAppLightBlue">#A6CEE3</color>
+    <color name="colorAppLightGreen">#B2DF8A</color>
+    <color name="colorNavSelectHighlight">#00796B</color>
+    <color name="colorNavUnselect">#737474</color>
+    <color name="colorAgustinsFavorite">#FAFAFA</color>
 </resources>
