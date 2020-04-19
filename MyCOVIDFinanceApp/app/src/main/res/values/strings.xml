@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">MyCOVIDFinanceApp</string>
+    <!-- page titles -->
     <string name="title_home">Home</string>
     <string name="title_accounts">Accounts</string>
     <string name="title_budget">Budget</string>
     <string name="title_transactions">Transactions</string>
     <string name="title_settings">Settings</string>
+    <!-- home -->
+    <string name="home_summary_title">Account Summary</string>
+
+    <!-- accounts -->
+
+    <!-- budget -->
+
+    <!-- transaction -->
+
+    <!-- settings -->
+    <string name="settings_profile">Profile Settings</string>
+    <string name="settings_view">View Settings</string>
 </resources>
