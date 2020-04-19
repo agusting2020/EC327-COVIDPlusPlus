@@ -1,16 +1,16 @@
-package com.example.mycovidfinanceapp.ui.dashboard;
+package com.example.mycovidfinanceapp.ui.budget;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class BudgetViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public BudgetViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is the budget fragment");
     }
 
     public LiveData<String> getText() {
