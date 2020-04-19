@@ -22,8 +22,8 @@ public class TransactionsFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         transactionsViewModel =
                 ViewModelProviders.of(this).get(TransactionsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
+        View root = inflater.inflate(R.layout.fragment_transactions, container, false);
+        final TextView textView = root.findViewById(R.id.text_transactions);
         transactionsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
