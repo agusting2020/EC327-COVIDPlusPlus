@@ -18,4 +18,11 @@
     <!-- settings -->
     <string name="settings_profile">Profile Settings</string>
     <string name="settings_view">View Settings</string>
+    <string name="account_summary">Account Summary</string>
+    <string name="month_at_a_glance">[Month] at a glance</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="upcoming_payments">Upcoming Payments</string>
+    <string name="budget_plans">Budget Plans</string>
+    <string name="weekly_spending">Weekly Spending</string>
+    <string name="self_destruct">Self Destruct</string>
 </resources>
