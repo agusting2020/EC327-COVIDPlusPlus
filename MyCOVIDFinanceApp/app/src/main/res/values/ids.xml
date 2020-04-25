@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="text_accounts" type="id" />
+    <item name="text_budget" type="id" />
+    <item name="text_settings" type="id" />
+    <item name="text_transactions" type="id" />
 </resources>
