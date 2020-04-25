@@ -9,7 +9,7 @@
     <FrameLayout
         android:id="@+id/frameLayout4"
         android:layout_width="0dp"
-        android:layout_height="73dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/sec_bkg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:text="@string/month_at_a_glance"
             android:textSize="20sp" />
     </FrameLayout>
@@ -27,7 +28,7 @@
     <FrameLayout
         android:id="@+id/frameLayout3"
         android:layout_width="410dp"
-        android:layout_height="73dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
@@ -46,8 +47,9 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/weekly_spending"
         android:layout_width="0dp"
-        android:layout_height="73dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"

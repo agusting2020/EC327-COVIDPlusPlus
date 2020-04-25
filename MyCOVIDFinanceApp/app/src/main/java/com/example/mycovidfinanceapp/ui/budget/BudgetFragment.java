@@ -23,13 +23,13 @@ public class BudgetFragment extends Fragment {
         budgetViewModel =
                 ViewModelProviders.of(this).get(BudgetViewModel.class);
         View root = inflater.inflate(R.layout.fragment_budget, container, false);
-        final TextView textView = root.findViewById(R.id.text_budget);
+        /*final TextView textView = root.findViewById(R.id.text_budget);
         budgetViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }
