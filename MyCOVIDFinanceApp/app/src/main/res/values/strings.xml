@@ -16,6 +16,7 @@
     <!-- budget -->
 
     <!-- transaction -->
+    <string name="transactions_title">All Transactions</string>
 
     <!-- settings -->
     <string name="settings_profile">Profile Settings</string>

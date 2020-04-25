@@ -3,6 +3,14 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- section -->
+    <dimen name="sec_radius">10dp</dimen>
+    <dimen name="sec_padding">10dp</dimen>
+    <dimen name="sec_margins">20dp</dimen>
+
+    <!-- elements -->
+    <dimen name="elem_margins">10dp</dimen>
+
     <!-- fonts -->
     <dimen name="font_welc">30sp</dimen>
     <dimen name="font_head">20sp</dimen>
