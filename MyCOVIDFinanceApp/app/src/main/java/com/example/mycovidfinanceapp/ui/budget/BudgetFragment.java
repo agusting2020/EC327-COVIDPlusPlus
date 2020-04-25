@@ -1,5 +1,6 @@
 package com.example.mycovidfinanceapp.ui.budget;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,8 @@ public class BudgetFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
         return root;
     }
+
 }

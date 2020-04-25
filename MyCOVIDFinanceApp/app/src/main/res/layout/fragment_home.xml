@@ -25,10 +25,11 @@
         android:layout_height="150dp"
         android:background="@drawable/bkg_welcome"
         android:padding="@dimen/sec_padding"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        >
 
         <TextView
             android:id="@+id/Welcome_Message_Text"
@@ -41,10 +42,11 @@
             android:textSize="@dimen/font_welc"
             android:textColor="#FFF"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
     </FrameLayout>
 
 
@@ -59,7 +61,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Welcome_Message">
+        app:layout_constraintTop_toBottomOf="@id/Welcome_Message"
+        >
 
         <TextView
             android:id="@+id/Account_Summary_Title"
@@ -71,10 +74,11 @@
             android:textAlignment="center"
             android:textSize="@dimen/font_head"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
     </FrameLayout>
 
     <FrameLayout
@@ -84,10 +88,11 @@
         android:layout_margin="@dimen/sec_margins"
         android:background="@drawable/bkg_sec"
         android:padding="@dimen/sec_padding"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Account_Summary">
+        app:layout_constraintTop_toBottomOf="@+id/Account_Summary"
+        >
 
         <TextView
             android:id="@id/text_month"
@@ -99,10 +104,11 @@
             android:textAlignment="center"
             android:textSize="@dimen/font_head"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
     </FrameLayout>
 
     <FrameLayout
@@ -112,10 +118,11 @@
         android:layout_margin="@dimen/sec_margins"
         android:background="@drawable/bkg_sec"
         android:padding="@dimen/sec_padding"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Monthly_View">
+        app:layout_constraintTop_toBottomOf="@+id/Monthly_View"
+        >
 
         <TextView
             android:id="@+id/Recent_Transactions_Title"
@@ -127,10 +134,11 @@
             android:textAlignment="center"
             android:textSize="@dimen/font_head"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
     </FrameLayout>
 
     <FrameLayout
@@ -140,10 +148,11 @@
         android:layout_margin="@dimen/sec_margins"
         android:background="@drawable/bkg_sec"
         android:padding="@dimen/sec_padding"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Recent_Transactions">
+        app:layout_constraintTop_toBottomOf="@+id/Recent_Transactions"
+        >
 
         <TextView
             android:id="@+id/Upcoming_Payments_Title"
@@ -155,10 +164,11 @@
             android:textAlignment="center"
             android:textSize="@dimen/font_head"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
