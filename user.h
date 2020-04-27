@@ -18,12 +18,20 @@ class User{
 		int num_accts;
 		int num_cards;
 		int num_loans;
+		string name;
+
 
 		//Methods
-		//gets:
-		Account getAccounts();
-		Card getCards();
-		Loan getLoans();
+		User(string name);
+		void addAccount(int acct_num, string bank_name, string type,float balance);
+		void addCard(string name,unsigned int num, float total_credit, string date);
+		void addLoan(string name, string type, float amount, string date);
+		void updateCredit(int new_credit);
+		*Account getAccounts();
+		*Card getCards();
+		*Loan getLoans();
+		int getCredit();
+
 };
 #endif
 		
