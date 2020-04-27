@@ -1,10 +1,10 @@
 #include<string>
 #include <iostream>
-#include "account.h"
-#include "transaction.h"
-#include "card.h"
-#include "loan.h"
-#include "user.h"
+#include "Account.h"
+#include "Transaction.h"
+#include "Card.h"
+#include "Loan.h"
+#include "User.h"
 
 using namespace std;
 

@@ -18,10 +18,6 @@ class Transaction{
 		string transaction_type;
 		//Actual amount of expense
 		float transaction_amount;
-		//Associated account or card
-		Account *assct_Account;
-
-		Card *assct_Card;
 
 		//Contructor
 		//For accounts and cards

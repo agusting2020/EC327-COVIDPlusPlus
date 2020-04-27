@@ -3,8 +3,8 @@
 
 #include <string>
 #include <iostream>
-#include "transaction.h"
-#include "user.h"
+#include "Transaction.h"
+#include "User.h"
 
 using namespace std;
 
@@ -26,7 +26,7 @@ class Account{
 		
 		//Array of Transactions associated with account
 		//cut off 50
-		Transaction *Transactions[50];
+		Transaction *transactions[50];
 		int num_trans; //for parsing
 
 

@@ -1,8 +1,8 @@
 #include<string>
 #include <iostream>
-#include "account.h"
-#include "transaction.h"
-#include "user.h"
+#include "Account.h"
+#include "Transaction.h"
+#include "User.h"
 
 using namespace std;
 
@@ -34,7 +34,7 @@ void Account::setBalance(float balance){
 //need to include resetting transaction array + num, when >50
 void Account::addTransaction(Transaction *trns){
 	num_Trans = num_Trans+1;
-	*(Trans+num_Trans) = trns;
+	*(transactions+num_Trans) = trns;
 }
 
 

@@ -3,8 +3,8 @@
 
 #include <string>
 #include <iostream>
-#include "transaction.h"
-#include "user.h"
+#include "Transaction.h"
+#include "User.h"
 
 using namespace std;
 
@@ -26,7 +26,7 @@ class Card{
 		//When the pay date is
 		string due_date;
 		//Amount due by pay date
-		float statement_balance
+		float statement_balance;
 		//Amount remaining on card
 		float remaining_credit;
 		//Transactions

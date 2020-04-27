@@ -1,34 +1,32 @@
 #include<string>
 #include <iostream>
-#include "transaction.h"
-#include "account.h"
-#include "card.h"
+#include "Transaction.h"
+#include "Account.h"
+#include "Card.h"
 
 using namespace std;
 
 Transaction::Transaction(string type, float amount,Account *acct){
-	Transaction_type = type;
-	if Transaction_type == "Deposit"{
-		Transaction_amount = amount;
+	transaction_type = type;
+	if (transaction_type == "Deposit"){
+		transaction_amount = amount;
 	}else{
-		Transaction_amount = -amount;
+		transaction_amount = -amount;
 	}
-	float new_balance = acct.account_Balance + amount;
-	acct.setBalance(new_balance);
-	trans = this->Transaction;
-	acct.addTransaction(*trans);
+	float new_balance = acct->account_balance + amount;
+	acct->setBalance(new_balance);
+	acct->addTransaction(this);
 }
 
 Transaction::Transaction(string type, float amount,Card *crd){
-	Transaction_type = type;
-	if Transaction_type == "Deposit"{
-		Transaction_amount = amount;
+	transaction_type = type;
+	if (transaction_type == "Deposit"){
+		transaction_amount = amount;
 	}else{
-		Transaction_amount = -amount;
+		transaction_amount = -amount;
 	}
 
-	float new_balance = crd.credit_Balance + amount;
-	crd.setBalance(new_balance);
-	trans = this->Transaction;
-	crd.addTransaction(*trans);
+	float new_balance = crd->credit_balance + amount;
+	crd->setBalance(new_balance);
+	crd->addTransaction(this);
 }

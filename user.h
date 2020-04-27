@@ -3,10 +3,17 @@
 
 #include <string>
 #include <iostream>
+#include "Account.h"
+#include "Transaction.h"
+#include "Card.h"
+#include "Loan.h"
 
 using namespace std;
 
 class User{
+	friend class Account;
+	friend class Card;
+	friend class Loan;
 	
 	private:
 		//maybe budget should be it's own class if there's one for each account? 
