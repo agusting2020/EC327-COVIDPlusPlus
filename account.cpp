@@ -27,12 +27,12 @@ Account::~Account(){
 	}
 }
 
-Account::setBalance(float balance){
+void Account::setBalance(float balance){
 	account_balance = balance;
 }
 
 //need to include resetting transaction array + num, when >50
-Account::addTransaction(Transaction *trns){
+void Account::addTransaction(Transaction *trns){
 	num_Trans = num_Trans+1;
 	*(Trans+num_Trans) = trns;
 }

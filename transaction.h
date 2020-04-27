@@ -27,3 +27,5 @@ class Transaction{
 		//For accounts and cards
 		Transaction(string type, float amount,Account *acct);
 		Transaction(string type, float amount,Card *card);
+};
+#endif

@@ -21,6 +21,11 @@ class User{
 
 		//Methods
 		//gets:
+		Account getAccounts();
+		Card getCards();
+		Loan getLoans();
+};
+#endif
 		
 
 

@@ -54,3 +54,5 @@ class Card{
 		//get methods
 		float getRemaining();
 
+};
+#endif

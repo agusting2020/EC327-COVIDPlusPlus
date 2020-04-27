@@ -31,4 +31,5 @@ class Loan{
 		//Update loan amount with new payment
 		void MakePayment(float amount);
 
-
+};
+#endif

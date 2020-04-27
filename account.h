@@ -34,6 +34,7 @@ class Account{
 
 		//Constructor
 		Account (User *usr,int acct_num, string bank_name, string type,float balance);
+		
 		//Deconstructor
 		~Account();
 		//Set Balance
@@ -41,7 +42,8 @@ class Account{
 		//Need to include error for contructing account without balance?
 
 		void addTransaction(Transaction *trans);
-
+};
+#endif
 
 		
 		
