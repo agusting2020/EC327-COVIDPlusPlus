@@ -19,169 +19,243 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
-    <FrameLayout
-        android:id="@+id/Welcome_Message"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:background="@drawable/bkg_welcome"
-        android:padding="@dimen/sec_padding"
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/Welcome_Message_Text"
-            android:text="@string/Welcome_Message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_welc"
-            android:textColor="#FFF"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-    </FrameLayout>
-
-
-
-    <FrameLayout
-        android:id="@+id/Account_Summary"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Welcome_Message"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal"
-            >
-
-            <TextView
-                android:id="@+id/Account_Summary_Title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/elem_margins"
-                android:text="@string/account_summary"
-                android:textAlignment="center"
-                android:textSize="@dimen/font_head"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+            <FrameLayout
+                android:id="@+id/Welcome_Message"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bkg_welcome"
+                android:padding="@dimen/sec_padding"
+                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
 
-            <ListView
-                android:id="@+id/accountslist"
+                <TextView
+                    android:id="@+id/Welcome_Message_Text"
+                    android:text="@string/Welcome_Message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_welc"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/Account_Summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/Account_Summary_Title" />
-        </LinearLayout>
-    </FrameLayout>
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/sec_padding"
+                android:layout_below="@id/Welcome_Message"
+                >
+                <TextView
+                    android:id="@+id/Account_Summary_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:text="@string/account_summary"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
-    <FrameLayout
-        android:id="@+id/Monthly_View"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/Account_Summary"
-        >
+                <LinearLayout
+                    android:id="@+id/Account_Summary_Checking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:layout_below="@id/Account_Summary_Title"
+                    >
 
-        <TextView
-            android:id="@id/text_month"
-            android:text="@string/month_at_a_glance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_head"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-    </FrameLayout>
+                    <TextView
+                        android:id="@+id/Account_Summary_Checking_Title"
+                        android:text="@string/accounts_checking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textSize="@dimen/font_body"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
 
-    <FrameLayout
-        android:id="@+id/Recent_Transactions"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/Monthly_View"
-        >
+                    <TextView
+                        android:id="@+id/Account_Summary_Checking_Balance"
+                        android:text="@string/accounts_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textSize="@dimen/font_body"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
 
-        <TextView
-            android:id="@+id/Recent_Transactions_Title"
-            android:text="@string/recent_transactions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_head"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-    </FrameLayout>
+                </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/Upcoming_Payments"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/Recent_Transactions"
-        >
+                <LinearLayout
+                    android:id="@+id/Account_Summary_Savings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:layout_below="@id/Account_Summary_Checking"
+                    >
 
-        <TextView
-            android:id="@+id/Upcoming_Payments_Title"
-            android:text="@string/upcoming_payments"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_head"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-    </FrameLayout>
+                    <TextView
+                        android:id="@+id/Account_Summary_Savings_Title"
+                        android:text="@string/accounts_savings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textSize="@dimen/font_body"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/Account_Summary_Savings_Balance"
+                        android:text="@string/accounts_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textSize="@dimen/font_body"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Account_Summary_Credit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:layout_below="@id/Account_Summary_Savings"
+                    >
+
+                    <TextView
+                        android:id="@+id/Account_Summary_Credit_Title"
+                        android:text="@string/accounts_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textSize="@dimen/font_body"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/Account_Summary_Credit_Balance"
+                        android:text="@string/accounts_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textSize="@dimen/font_body"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Monthly_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:gravity="center"
+                android:padding="@dimen/sec_padding"
+                android:layout_below="@id/Account_Summary"
+                >
+
+                <TextView
+                    android:id="@id/text_month"
+                    android:text="@string/month_at_a_glance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Recent_Transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:gravity="center"
+                android:padding="@dimen/sec_padding"
+                android:layout_below="@id/Monthly_View"
+                >
+
+                <TextView
+                    android:id="@+id/Recent_Transactions_Title"
+                    android:text="@string/recent_transactions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Upcoming_Payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:gravity="center"
+                android:padding="@dimen/sec_padding"
+                android:layout_below="@id/Recent_Transactions"
+                >
+
+                <TextView
+                    android:id="@+id/Upcoming_Payments_Title"
+                    android:text="@string/upcoming_payments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

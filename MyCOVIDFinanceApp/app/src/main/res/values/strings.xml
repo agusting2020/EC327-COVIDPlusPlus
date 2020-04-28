@@ -12,6 +12,11 @@
     <string name="home_summary_title">Account Summary</string>
 
     <!-- accounts -->
+    <string name="accounts_checking">Checking</string>
+    <string name="accounts_savings">Savings</string>
+    <string name="accounts_credit">Credit</string>
+    <string name="accounts_balance">Balance</string>
+
 
     <!-- budget -->
 
