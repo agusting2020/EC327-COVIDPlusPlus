@@ -11,14 +11,12 @@ class Item{
     protected:
         //Members:
 
-
-        //used by account, class, and loan
-
         string ID_number; //this maybe private?
 
         float Balance;
         string bank_and_type;
-        vector <float>* Transactions;
+        vector <float> Transactions;
+        //vector <float>* Transactions;
         //Question: should this be a pointer or will it be in user?
 
 
@@ -44,6 +42,7 @@ class Item{
         //Return members for viewing
         float getBalance();
         string getName(); //bank and type
+
         float* getTransactions();
 
 };
