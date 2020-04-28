@@ -15,7 +15,6 @@ class Account{
 
 	//Members
 	protected:
-		//Might need to change this to a class, depending on if this is just for display like xxxx-last 4 digits, or if it's neeeded for identification with plaid
 		int account_number;
 		//Bank name
 		string bank;
@@ -33,15 +32,15 @@ class Account{
 	//Methods
 
 		//Constructor
-		Account (User *usr,int acct_num, string bank_name, string type,float balance);
+		friend Account (int acct_num, string bank_name, string type,float balance);
 		
 		//Deconstructor
 		~Account();
 		//Set Balance
-		void setBalance(float balance);
+		friend void setBalance(float balance);
 		//Need to include error for contructing account without balance?
 
-		void addTransaction(Transaction *trans);
+		friend void addTransaction(Transaction *trans);
 };
 #endif
 

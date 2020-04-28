@@ -29,15 +29,15 @@ class User{
 
 
 		//Methods
-		User(string name);
-		void addAccount(int acct_num, string bank_name, string type,float balance);
-		void addCard(string name,unsigned int num, float total_credit, string date);
-		void addLoan(string name, string type, float amount, string date);
-		void updateCredit(int new_credit);
-		*Account getAccounts();
-		*Card getCards();
-		*Loan getLoans();
-		int getCredit();
+		friend User(string name);
+		friend void addAccount(int acct_num, string bank_name, string type,float balance);
+		friend void addCard(string name,unsigned int num, float total_credit, string date);
+		friend void addLoan(string name, string type, float amount, string date);
+		friend void updateCredit(int new_credit);
+		friend Account getAccounts();
+		friend Card getCards();
+		friend Loan getLoans();
+		friend int getCredit();
 
 };
 #endif

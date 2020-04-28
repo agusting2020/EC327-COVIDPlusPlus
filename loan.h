@@ -22,14 +22,14 @@ class Loan{
 		float payment;
 
 		//Constructor
-		Loan(User *usr,string name, string type, float amount, string date);
+		friend Loan(string name, string type, float amount, string date);
 		//Deconstructor
 		~Loan();
 
 		//manually change next payment date
-		void setDate();
+		friend void setDate();
 		//Update loan amount with new payment
-		void MakePayment(float amount);
+		friend void MakePayment(float amount);
 
 };
 #endif

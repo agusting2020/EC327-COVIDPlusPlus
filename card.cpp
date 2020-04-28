@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Card::Card(string name, User *usr, unsigned int num, float total_credit, string date){
+Card::Card(string name, unsigned int num, float total_credit, string date){
 	card_name = name;
 	card_number = num;
 	credit_amount = total_credit;
@@ -15,8 +15,6 @@ Card::Card(string name, User *usr, unsigned int num, float total_credit, string 
 	statement_balance = 0.0;
 	remaining_credit = credit_amount;
 	credit_balance = 0.0;
-	usr.num_cards = usr.num_cards + 1;
-	*(usr.cards+usr.num_cards) = this->Card;
 }
 
 Card::~Card(){

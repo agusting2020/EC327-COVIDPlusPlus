@@ -37,22 +37,22 @@ class Card{
 	//Methods
 
 		//Constructor
-		Card(string name, User *usr, unsigned int num, float total_credit, string date);
+		friend Card(string name, unsigned int num, float total_credit, string date);
 		//Deconstructor
 		~Card();
 
 		//set methods
 
-		void setDate(string date);
-		void setCurrentBalance(float balance);
-		void setStatementBalance(float balance);
+		friend void setDate(string date);
+		friend void setCurrentBalance(float balance);
+		friend void setStatementBalance(float balance);
 
 
 		//Transaction methods
-		void addTransaction();
+		friend void addTransaction();
 
 		//get methods
-		float getRemaining();
+		friend float getRemaining();
 
 };
 #endif
