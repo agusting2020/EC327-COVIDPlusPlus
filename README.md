@@ -7,6 +7,8 @@
 
 #### Installation
 
+
+
 #### Cloning
 
 git clone https://github.com/agusting2020/EC327-COVIDPlusPlus.git
@@ -26,9 +28,9 @@ A couple of example commands might be good
 If you have a GUI application, you can add snapshots
 Tests (If you conduct any) - Optional
 
-#### Team Name or Contributors
-agusting2020 - ***Agustin Guzman (Project Lead)***
-sonyahj98 - ***Sonya Harvey (Interface Lead)***
-joannajames - ***Joanna James (Technical Lead)***
-ddyson1 - ***Devin Dyson (Documentation Lead)***
-jpadgett99 - ***Julian Padgett (Specification Lead)***
+#### Contributors
+- agusting2020 - Agustin Guzman (Project Lead)
+- sonyahj98 - Sonya Harvey (Interface Lead)
+- joannajames - Joanna James (Technical Lead)
+- ddyson1 - Devin Dyson (Documentation Lead)
+- jpadgett99 - Julian Padgett (Specification Lead)
