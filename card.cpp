@@ -29,7 +29,7 @@ void Card::setCurrentBalance(float balance){
 }
 
 //manually set Statement balance
-void setStatementBalance(float balance){
+void Card::setStatementBalance(float balance){
 	statement_balance = balance;
 }
 
