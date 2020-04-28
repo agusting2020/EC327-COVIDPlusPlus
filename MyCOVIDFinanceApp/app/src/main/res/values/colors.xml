@@ -8,4 +8,9 @@
     <color name="colorNavSelectHighlight">#00796B</color>
     <color name="colorNavUnselect">#737474</color>
     <color name="colorAgustinsFavorite">#F6EFE9</color>
+
+
+    <color name="PieChart1">#00BCD4</color>
+    <color name="PieChart2">#0097A7</color>
+    <color name="PieChart3">#009688</color>
 </resources>
