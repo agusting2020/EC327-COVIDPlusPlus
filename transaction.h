@@ -19,9 +19,7 @@ class Transaction{
 		//Actual amount of expense
 		float transaction_amount;
 
-		//Contructor
-		//For accounts and cards
-		friend Transaction(string type, float amount,Account *acct);
-		friend Transaction(string type, float amount,Card *crd);
+		Transaction(string type, float amount,Account *acct);
+		Transaction(string type, float amount,Card *crd);
 };
 #endif

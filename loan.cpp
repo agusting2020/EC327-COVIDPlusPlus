@@ -12,9 +12,7 @@ Loan::Loan(string name, string type, float amount, string date){
 		loan_amount = amount;
 		due_date = date;
 }
-Loan::~Loan(){
-	delete Loan;
-}
+
 void Loan::setDate(string date){
 	due_date = date;
 }

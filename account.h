@@ -33,14 +33,12 @@ class Account{
 
 		//Constructor
 		Account (int acct_num, string bank_name, string type,float balance);
-		
-		//Deconstructor
-		~Account();
+
 		//Set Balance
-		friend void setBalance(float balance);
+		void setBalance(float balance);
 		//Need to include error for contructing account without balance?
 
-		friend void addTransaction(Transaction *trans);
+		void addTransaction(Transaction *trans);
 };
 #endif
 
