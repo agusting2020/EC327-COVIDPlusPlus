@@ -2,7 +2,7 @@
 1. [`Installation`](#Installation)
 2. [`Cloning`](#Cloning)
 3. [`Setup`](#Setup)
-4. [`How to Run`](#How to Run)
+4. [`How to run`](#How to run)
 5. [`Contributors`](#Contributors)
 
 #### Installation
