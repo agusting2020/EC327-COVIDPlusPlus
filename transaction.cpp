@@ -1,8 +1,8 @@
 #include<string>
 #include <iostream>
-#include "Transaction.h"
-#include "Account.h"
-#include "Card.h"
+#include "transaction.h"
+#include "account.h"
+#include "card.h"
 
 using namespace std;
 

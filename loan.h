@@ -3,7 +3,7 @@
 
 #include <string>
 #include <iostream>
-#include "User.h"
+#include "user.h"
 
 using namespace std;
 

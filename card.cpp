@@ -1,8 +1,8 @@
 #include<string>
 #include <iostream>
-#include "Card.h"
-#include "User.h"
-#include "Transaction.h"
+#include "card.h"
+#include "user.h"
+#include "transaction.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ Card::~Card(){
 //need to include resetting transaction array + num, when >50
 void Card::addTransaction(Transaction *trns){
 	num_Trans = num_Trans+1;
-	*(Trans+num_Trans) = trns;
+	*(Transactions+num_Trans) = trns;
 }
 
 //manually set balance, also used in updating when making a transaction

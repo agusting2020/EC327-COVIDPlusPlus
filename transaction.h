@@ -22,6 +22,6 @@ class Transaction{
 		//Contructor
 		//For accounts and cards
 		friend Transaction(string type, float amount,Account *acct);
-		friend Transaction(string type, float amount,Card *card);
+		friend Transaction(string type, float amount,Card *crd);
 };
 #endif

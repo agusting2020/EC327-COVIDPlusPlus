@@ -3,8 +3,8 @@
 
 #include <string>
 #include <iostream>
-#include "Transaction.h"
-#include "User.h"
+#include "transaction.h"
+#include "user.h"
 
 using namespace std;
 
@@ -32,7 +32,7 @@ class Account{
 	//Methods
 
 		//Constructor
-		friend Account (int acct_num, string bank_name, string type,float balance);
+		Account (int acct_num, string bank_name, string type,float balance);
 		
 		//Deconstructor
 		~Account();

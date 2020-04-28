@@ -3,8 +3,8 @@
 
 #include <string>
 #include <iostream>
-#include "Transaction.h"
-#include "User.h"
+#include "transaction.h"
+#include "user.h"
 
 using namespace std;
 

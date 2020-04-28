@@ -1,7 +1,7 @@
 #include<string>
 #include <iostream>
-#include "Loan.h"
-#include "User.h"
+#include "loan.h"
+#include "user.h"
 
 using namespace std;
 
