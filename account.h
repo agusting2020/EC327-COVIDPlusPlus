@@ -3,8 +3,10 @@
 
 #include <string>
 #include <iostream>
-#include "transaction.h"
 #include "user.h"
+#include "transaction.h"
+#include "card.h"
+#include "loan.h"
 
 using namespace std;
 
@@ -12,6 +14,8 @@ class Account{
 
 	friend class User;
 	friend class Transaction;
+	friend class Card;
+	friend class Loan;
 
 	//Members
 	protected:

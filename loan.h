@@ -3,13 +3,18 @@
 
 #include <string>
 #include <iostream>
-#include "user.h"
+#include "account.h"
+#include "transaction.h"
+#include "card.h"
+
 
 using namespace std;
 
 class Loan{
 	friend class User;
 	friend class Transaction;
+	friend class Card;
+	friend class Account;
 	protected:
 		//Company/Bank
 		string loan_name;

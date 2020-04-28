@@ -14,7 +14,7 @@ class Transaction{
 	friend class Account;
 	friend class Card;
 	friend class Loan;
-
+	friend class User;
 	protected:
 
 		//Members:

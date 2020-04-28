@@ -1,10 +1,10 @@
 #include<string>
 #include <iostream>
+#include "user.h"
 #include "account.h"
 #include "transaction.h"
 #include "card.h"
 #include "loan.h"
-#include "user.h"
 
 using namespace std;
 
@@ -30,7 +30,7 @@ void User::addLoan(string name, string type, float amount, string date){
 	*(loans+num_loans) = &loan;
 }
 
-void User:: updateCredit(int new_credit){
+void User::updateCredit(int new_credit){
 	credit = new_credit;
 }
 

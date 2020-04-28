@@ -14,6 +14,7 @@ class User{
 	friend class Account;
 	friend class Card;
 	friend class Loan;
+	friend class Transaction;
 	
 	protected:
 		//still have to work on budget

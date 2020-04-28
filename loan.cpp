@@ -1,7 +1,11 @@
 #include<string>
 #include <iostream>
 #include "loan.h"
+#include "account.h"
 #include "user.h"
+#include "transaction.h"
+#include "card.h"
+
 
 using namespace std;
 
