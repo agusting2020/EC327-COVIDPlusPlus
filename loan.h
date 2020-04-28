@@ -9,6 +9,7 @@ using namespace std;
 
 class Loan{
 	friend class User;
+	friend class Transaction;
 	protected:
 		//Company/Bank
 		string loan_name;
@@ -18,8 +19,11 @@ class Loan{
 		float loan_amount;
 		//next due payment
 		string due_date;
-		//payment
-		float payment;
+
+		//Array of Payments associated with account
+		//cut off 50
+		Transaction *payments[50];
+		int num_payments; //for parsing
 
 		//Constructor
 		Loan(string name, string type, float amount, string date);
@@ -27,7 +31,7 @@ class Loan{
 		//manually change next payment date
 		void setDate(string Date);
 		//Update loan amount with new payment
-		void MakePayment(float amount);
+		void MakePayment(Transaction *trans);
 
 };
 #endif

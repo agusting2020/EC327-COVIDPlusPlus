@@ -1,5 +1,5 @@
-#ifndef Account_H
-#define Account_H
+#ifndef User_H
+#define User_H
 
 #include <string>
 #include <iostream>
@@ -16,7 +16,7 @@ class User{
 	friend class Loan;
 	
 	protected:
-		//maybe budget should be it's own class if there's one for each account? 
+		//still have to work on budget
 		float budget;
 		Account *accounts[8]; //Only 8 allowed
 		Card *cards[4]; //Only 4 allowed
@@ -28,16 +28,29 @@ class User{
 		string name;
 
 
-		//Methods
-		friend User(string name);
-		friend void addAccount(int acct_num, string bank_name, string type,float balance);
-		friend void addCard(string name,unsigned int num, float total_credit, string date);
-		friend void addLoan(string name, string type, float amount, string date);
-		friend void updateCredit(int new_credit);
-		friend Account getAccounts();
-		friend Card getCards();
-		friend Loan getLoans();
-		friend int getCredit();
+		//Constructor user's name only required
+		User(string name);
+
+		//Making new accounts, cards and loans
+
+		//Account number + Bank name + Type (checkings, savings etc.), + account balance
+		void addAccount(int acct_num, string bank_name, string type,float balance);
+
+		//Card Name (Chase Saphire, BOFA wtv) + card number + associated card credit + payment date (Idk if i need the date here)
+		void addCard(string name,unsigned int num, float total_credit, string date);
+
+		//Loan Name (this might just be the bank or company) + type (personal or student) + amount (current amount left to pay off) + date for next loan payment
+		void addLoan(string name, string type, float amount, string date);
+
+		//Updating credit score
+		void updateCredit(int new_credit);
+
+
+		//Gets
+		Account* getAccounts();
+		Card* getCards();
+		Loan* getLoans();
+		int getCredit();
 
 };
 #endif

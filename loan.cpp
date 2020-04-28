@@ -17,6 +17,8 @@ void Loan::setDate(string date){
 	due_date = date;
 }
 
-void Loan::MakePayment(float amount){
-	loan_amount = loan_amount - amount;
+void Loan::MakePayment(Transaction *trans){
+	num_payments = num_payments+1;
+	*(payments+num_payments) = trans;
+	
 }
