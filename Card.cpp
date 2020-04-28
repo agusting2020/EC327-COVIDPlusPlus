@@ -5,6 +5,13 @@
 
 using namespace std;
 
+
+Card::Card():Item(){
+    ID_number="0000-0000-0000";//12 digit max per regulation (normally 8-12 digits)
+    Balance = 0.0;
+    bank_and_type= "NULL";
+}
+
 Card::Card(string ID_number, string bank_and_type, float balance, float credit, float statement_balance, string date){
     this->ID_number = ID_number;
     Balance = balance;

@@ -5,6 +5,19 @@
 
 using namespace std;
 
+
+Account::Account():Item(){
+    ID_number="0000-0000-0000";//12 digit max per regulation (normally 8-12 digits)
+    Balance = 0.0;
+    bank_and_type= "NULL";
+}
+
+Account::Account(string ID_number, string bank_and_type, float balance){
+    this->ID_number = ID_number;
+    Balance = balance;
+    this->bank_and_type = bank_and_type;
+}
+
 //setting a budget needs the amount
 void Account::setBudget(float budget_amount){
     Budget = budget_amount;

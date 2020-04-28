@@ -30,7 +30,7 @@ void User::Add_Account(string ID_number, string bank_and_type, float balance){
 }
 
 void User::Add_Loan(string ID_number, string bank_and_type, float balance, string date){
-    Loan new_loan = Loan(ID_number,bank_and_type,balance);
+    Loan new_loan = Loan(ID_number,bank_and_type,balance,date);
     if (Loans.size() == 8){ 
         Loans.clear(); 
     }
@@ -38,8 +38,8 @@ void User::Add_Loan(string ID_number, string bank_and_type, float balance, strin
 }
 
 void User::Add_Card(string ID_number, string bank_and_type, float balance, float credit, float statement_balance, string date){
-    Card new_card = Card(ID_number,bank_and_type,balance);
-    if (Cards.size() == 4){ 
+    Card new_card = Card(ID_number,bank_and_type,balance,credit, statement_balance, date);
+    if (Cards.size() == 8){ 
         Cards.clear(); 
     }
     Cards.push_back(new_card);
@@ -50,7 +50,7 @@ void User::setCredit(int credit){
 }
 
 Account* User::getAccounts(){
-     static Account *Accounts_Array = new Account[4];
+     static Account Accounts_Array[20];
      for (int i = 0; i<20; i++){
          Accounts_Array[i] = Accounts.at(i);
      }
@@ -58,7 +58,7 @@ Account* User::getAccounts(){
 }
 
 Loan* User::getLoans(){
-     static Loan *Loans_Array = new Loan[8];
+     static Loan Loans_Array[20];
      for (int i = 0; i<20; i++){
          Loans_Array[i] = Loans.at(i);
      }
@@ -66,7 +66,7 @@ Loan* User::getLoans(){
 }
 
 Card* User::getCards(){
-     static Card *Cards_Array = new Card[4];
+     static Card Cards_Array[20];
      for (int i = 0; i<20; i++){
          Cards_Array[i] = Cards.at(i);
      }

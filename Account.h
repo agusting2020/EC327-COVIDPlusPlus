@@ -8,8 +8,10 @@
 class Account : public Item{
     public:
         //inherit item constructor
-        using Item::Item;
-    
+        //using Item::Item;
+
+        Account();
+        Account(string ID_number, string bank_and_type, float balance);
         float Budget;
         float balance_when_budget_set;
 

@@ -8,7 +8,7 @@
 class Card : public Item{
     public:
         //inherit item constructor
-        using Item::Item;
+        //using Item::Item;
 
         //Members:
 
@@ -22,6 +22,7 @@ class Card : public Item{
         //Methods:
 
         //Constructor
+        Card();
         Card(string ID_number, string bank_and_type, float balance, float credit, float statement_balance, string date);
 
         //sets

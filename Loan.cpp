@@ -6,6 +6,12 @@
 using namespace std;
 
 //Next payment date
+Loan::Loan(): Item(){
+    ID_number="0000-0000-0000";//12 digit max per regulation (normally 8-12 digits)
+    Balance = 0.0;
+    bank_and_type= "NULL";
+
+}
 Loan::Loan(string ID_number, string bank_and_type, float balance, string date){
     this->ID_number = ID_number;
     Balance = balance;

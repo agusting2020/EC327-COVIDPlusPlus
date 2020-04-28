@@ -8,7 +8,7 @@
 class Loan : public Item{
     public:
         //inherit item constructor
-        using Item::Item;
+        //using Item::Item;
 
         //Members:
 
@@ -16,6 +16,7 @@ class Loan : public Item{
 
         //Methods:
         //Constructor using due date parameter
+        Loan();
         Loan(string ID_number, string bank_and_type, float balance, string date);
         
         void setDueDate(string date);
