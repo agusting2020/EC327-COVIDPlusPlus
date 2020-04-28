@@ -15,7 +15,7 @@ class User{
 	friend class Card;
 	friend class Loan;
 	
-	private:
+	protected:
 		//maybe budget should be it's own class if there's one for each account? 
 		float budget;
 		Account *accounts[8]; //Only 8 allowed

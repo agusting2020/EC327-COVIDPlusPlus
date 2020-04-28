@@ -9,7 +9,7 @@ using namespace std;
 
 class Loan{
 	friend class User;
-	private:
+	protected:
 		//Company/Bank
 		string loan_name;
 		//Personal or Student or 'Other'

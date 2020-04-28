@@ -13,7 +13,7 @@ class Transaction{
 	friend class Account;
 	friend class Card;
 
-	private:
+	protected:
 		//expense or deposit
 		string transaction_type;
 		//Actual amount of expense

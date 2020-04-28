@@ -12,7 +12,7 @@ class Card{
 	friend class User;
 	friend class Transaction;
 
-	private:
+	protected:
 	//Members
 
 		//Bank + card name

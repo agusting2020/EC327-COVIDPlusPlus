@@ -14,7 +14,7 @@ class Account{
 	friend class Transaction;
 
 	//Members
-
+	protected:
 		//Might need to change this to a class, depending on if this is just for display like xxxx-last 4 digits, or if it's neeeded for identification with plaid
 		int account_number;
 		//Bank name
