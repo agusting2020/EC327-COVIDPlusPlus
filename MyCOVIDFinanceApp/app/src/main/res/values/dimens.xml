@@ -5,8 +5,8 @@
 
     <!-- section -->
     <dimen name="sec_radius">10dp</dimen>
-    <dimen name="sec_padding">10dp</dimen>
-    <dimen name="sec_margins">20dp</dimen>
+    <dimen name="sec_padding">20dp</dimen>
+    <dimen name="sec_margins">10dp</dimen>
 
     <!-- elements -->
     <dimen name="elem_margins">10dp</dimen>
