@@ -1,8 +1,10 @@
 #include<string>
 #include <iostream>
-#include "Account.h"
-#include "Transaction.h"
-#include "User.h"
+#include "account.h"
+#include "user.h"
+#include "transaction.h"
+#include "card.h"
+#include "loan.h"
 
 using namespace std;
 
@@ -11,18 +13,9 @@ Account::Account(int acct_num, string bank_name, string type,float balance){
 	bank = bank_name;
 	account_type = type;
 	account_balance = balance;
-	num_expenses=0;
+	num_trans=0;
 
 
-}
-Account::~Account(){
-	string user_input;
-	//Idk if this belongs here or if this is a UI thing
-	cout<<"Are you sure you want to delete this account?"<<endl<<"[Y/N]"<<endl;
-	cin>>user_input;
-	if (user_input == "Y"){
-		delete Account;
-	}
 }
 
 void Account::setBalance(float balance){

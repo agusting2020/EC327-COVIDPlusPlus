@@ -5,6 +5,7 @@
 #include <iostream>
 #include "account.h"
 #include "card.h"
+#include "loan.h"
 
 using namespace std;
 
@@ -12,16 +13,29 @@ class Transaction{
 
 	friend class Account;
 	friend class Card;
-
+	friend class Loan;
+	friend class User;
 	protected:
-		//expense or deposit
+
+		//Members:
+
+		//deposit or expense (defines if it's a postive or negative number when updating balances)
 		string transaction_type;
-		//Actual amount of expense
+		//Dollllarrrss
 		float transaction_amount;
 
-		//Contructor
-		//For accounts and cards
-		friend Transaction(string type, float amount,Account *acct);
-		friend Transaction(string type, float amount,Card *card);
+
+		//Methods:
+
+		//Three kinds of transactions (constructors)
+
+		//deposit or expense to account
+		Transaction(string type, float amount,Account *acct);
+
+		//deposit or expense on card
+		Transaction(string type, float amount,Card *crd);
+
+		//payment on loan
+		Transaction(float amount, Loan *loan);
 };
 #endif

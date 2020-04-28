@@ -1,7 +1,11 @@
 #include<string>
 #include <iostream>
-#include "Loan.h"
-#include "User.h"
+#include "loan.h"
+#include "account.h"
+#include "user.h"
+#include "transaction.h"
+#include "card.h"
+
 
 using namespace std;
 
@@ -12,13 +16,13 @@ Loan::Loan(string name, string type, float amount, string date){
 		loan_amount = amount;
 		due_date = date;
 }
-Loan::~Loan(){
-	delete Loan;
-}
+
 void Loan::setDate(string date){
 	due_date = date;
 }
 
-void Loan::MakePayment(float amount){
-	loan_amount = loan_amount - amount;
+void Loan::MakePayment(Transaction *trans){
+	num_payments = num_payments+1;
+	*(payments+num_payments) = trans;
+	
 }

@@ -1,8 +1,10 @@
 #include<string>
 #include <iostream>
-#include "Card.h"
-#include "User.h"
-#include "Transaction.h"
+#include "card.h"
+#include "account.h"
+#include "user.h"
+#include "transaction.h"
+#include "loan.h"
 
 using namespace std;
 
@@ -17,32 +19,28 @@ Card::Card(string name, unsigned int num, float total_credit, string date){
 	credit_balance = 0.0;
 }
 
-Card::~Card(){
-	delete Card;
-}
-
 //need to include resetting transaction array + num, when >50
 void Card::addTransaction(Transaction *trns){
-	num_Trans = num_Trans+1;
-	*(Trans+num_Trans) = trns;
+	num_Transactions = num_Transactions+1;
+	*(Transactions+num_Transactions) = trns;
 }
 
 //manually set balance, also used in updating when making a transaction
 void Card::setCurrentBalance(float balance){
-	this->credit_balance = balance;
+	credit_balance = balance;
 }
 
 //manually set Statement balance
-void setStatementBalance(float balance){
-	this -> statement_balance = balance;
+void Card::setStatementBalance(float balance){
+	statement_balance = balance;
 }
 
 //Manually set payment dates
 void Card::setDate(string date){
-	this->due_date = date;
+	due_date = date;
 }
 
 //get available credit
 float Card::getRemaining(){
-	this -> remaining_credit = credit_amount - credit_balance;
+	remaining_credit = credit_amount - credit_balance;
 }

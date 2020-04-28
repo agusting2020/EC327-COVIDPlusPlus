@@ -3,14 +3,17 @@
 
 #include <string>
 #include <iostream>
-#include "Transaction.h"
-#include "User.h"
+#include "account.h"
+#include "transaction.h"
+#include "loan.h"
 
 using namespace std;
 
 class Card{
 	friend class User;
 	friend class Transaction;
+	friend class Account;
+	friend class Loan;
 
 	protected:
 	//Members
@@ -37,22 +40,20 @@ class Card{
 	//Methods
 
 		//Constructor
-		friend Card(string name, unsigned int num, float total_credit, string date);
-		//Deconstructor
-		~Card();
+		Card(string name, unsigned int num, float total_credit, string date);
 
 		//set methods
 
-		friend void setDate(string date);
-		friend void setCurrentBalance(float balance);
-		friend void setStatementBalance(float balance);
+		void setDate(string date);
+		void setCurrentBalance(float balance);
+		void setStatementBalance(float balance);
 
 
 		//Transaction methods
-		friend void addTransaction();
+		void addTransaction(Transaction *trns);
 
 		//get methods
-		friend float getRemaining();
+		float getRemaining();
 
 };
 #endif

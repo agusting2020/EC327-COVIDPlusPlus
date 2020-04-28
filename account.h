@@ -3,8 +3,10 @@
 
 #include <string>
 #include <iostream>
-#include "Transaction.h"
-#include "User.h"
+#include "user.h"
+#include "transaction.h"
+#include "card.h"
+#include "loan.h"
 
 using namespace std;
 
@@ -12,6 +14,8 @@ class Account{
 
 	friend class User;
 	friend class Transaction;
+	friend class Card;
+	friend class Loan;
 
 	//Members
 	protected:
@@ -32,15 +36,13 @@ class Account{
 	//Methods
 
 		//Constructor
-		friend Account (int acct_num, string bank_name, string type,float balance);
-		
-		//Deconstructor
-		~Account();
+		Account (int acct_num, string bank_name, string type,float balance);
+
 		//Set Balance
-		friend void setBalance(float balance);
+		void setBalance(float balance);
 		//Need to include error for contructing account without balance?
 
-		friend void addTransaction(Transaction *trans);
+		void addTransaction(Transaction *trans);
 };
 #endif
 
