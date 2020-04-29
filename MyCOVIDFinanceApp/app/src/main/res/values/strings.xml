@@ -33,14 +33,5 @@
     <string name="budget_plans">Budget Plans</string>
     <string name="weekly_spending">Weekly Spending</string>
     <string name="self_destruct">Self Destruct</string>
-    <string name="categories_empty">Empty</string>
-    <string name="statistics">Statistics</string>
-    <string name="total_expenses_per_category">Total Expenses Per Category</string>
-    <string name="no_chart_data">No Chart Data</string>
-    <string name="categories_percentage">Categories Percentage</string>
-    <string name="categories" />
-    <string name="save" />
-    <string name="cancel" />
-    <string name="add_new_expense" />
 
 </resources>
