@@ -6,91 +6,103 @@
     android:layout_height="match_parent"
     tools:context=".ui.budget.BudgetFragment">
 
-    <FrameLayout
-        android:id="@+id/frameLayout4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/text_month"
-            android:text="@string/month_at_a_glance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_head"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="parent"
-            />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
+        app:layout_constraintTop_toTopOf="parent"
         >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textView5"
-            android:text="@string/budget_plans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_head"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-    </FrameLayout>
+            <RelativeLayout
+                android:id="@+id/frameLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:padding="@dimen/sec_padding"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <FrameLayout
-        android:id="@+id/weekly_spending"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/sec_margins"
-        android:background="@drawable/bkg_sec"
-        android:padding="@dimen/sec_padding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+                <TextView
+                    android:id="@+id/Monthly_View_Title"
+                    android:text="@string/month_at_a_glance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:text="@string/weekly_spending"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/elem_margins"
-            android:textAlignment="center"
-            android:textSize="@dimen/font_head"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-    </FrameLayout>
+                <include layout="@layout/piechart_monthly"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_below="@id/Monthly_View_Title" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frameLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:padding="@dimen/sec_padding"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
+                android:layout_below="@id/frameLayout4"
+                >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:text="@string/budget_plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/weekly_spending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sec_margins"
+                android:background="@drawable/bkg_sec"
+                android:padding="@dimen/sec_padding"
+                android:layout_below="@id/frameLayout3"
+                >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:text="@string/weekly_spending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/elem_margins"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_head"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </FrameLayout>
+        </RelativeLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

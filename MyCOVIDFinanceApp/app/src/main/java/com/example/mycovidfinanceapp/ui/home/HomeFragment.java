@@ -32,16 +32,15 @@ public class HomeFragment extends Fragment implements OnChartValueSelectedListen
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ;
-        PieDataSet dataSet;
+        PieDataSet pieDataSet;
         PieData pieData;
 
 
         List<PieEntry> Values = new ArrayList<>();
-        Values.add(new PieEntry(8f, 0));
-        Values.add(new PieEntry(15f, 1));
-        Values.add(new PieEntry(12f, 2));
-        Values.add(new PieEntry(25f, 3));
+        Values.add(new PieEntry(80f, 0));
+        Values.add(new PieEntry(50f, 1));
+        Values.add(new PieEntry(20f, 2));
+        Values.add(new PieEntry(75f, 3));
 
         List<String> Category = new ArrayList<>();
         Category.add("Category 1");
@@ -49,9 +48,9 @@ public class HomeFragment extends Fragment implements OnChartValueSelectedListen
         Category.add("Category 3");
         Category.add("Category 4");
 
-        dataSet = new PieDataSet(Values, "Categorical Spending");
+        pieDataSet = new PieDataSet(Values, "Categorical Spending");
 
-        pieData = new PieData(dataSet);
+        pieData = new PieData(pieDataSet);
 
         PieChart pieChart = root.findViewById(R.id.piechart);
 
@@ -61,9 +60,9 @@ public class HomeFragment extends Fragment implements OnChartValueSelectedListen
 
         pieChart.setDrawHoleEnabled(true);
         pieChart.setTransparentCircleRadius(25f);
-        pieChart.setHoleRadius(25f);
+        pieChart.setHoleRadius(50f);
 
-        dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        pieDataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
         pieData.setValueTextSize(13f);
         pieData.setValueTextColor(Color.BLACK);
         pieChart.setOnChartValueSelectedListener(this);
